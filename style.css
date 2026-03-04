@@ -1,0 +1,19 @@
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+button {
+    font-weight: bold;
+}
+
+h2 {
+    color: #1f3c88;
+}
