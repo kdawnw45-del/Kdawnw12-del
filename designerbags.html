@@ -3,229 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Designer Bags | Home</title>
+    <title>Elite Designer Bags | Official Site</title>
     <style>
-        /* Requirement 4 & 10: Styling, Background (Teal), and Aesthetics */
+        /* Requirement 4 & 10: Styling & Teal Background */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
-            background-color: teal; /* Requirement: Background color Teal */
+            background-color: teal; 
             color: #333;
+            scroll-behavior: smooth; /* Makes the nav links glide smoothly */
         }
 
-        /* Requirement 6: Menu Bar - At least 5 menus */
+        /* Requirement 6: Working Menu Bar */
         nav {
             background-color: #004d4d;
-            padding: 1rem;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             text-align: center;
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0 15px;
+            padding: 10px 20px;
             font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #007a7a;
+            border-radius: 5px;
         }
 
         /* Requirement: Home Page Blue Styling */
-        .hero-section {
-            background-color: #0056b3; /* Home page blue */
+        header {
+            background-color: #0056b3; 
             color: white;
-            padding: 40px;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        /* Requirement 1: At least 2 columns */
-        .container {
+        /* Requirement 1: 2 Column Layout */
+        .main-content {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
             padding: 20px;
+            gap: 20px;
         }
-        .column {
-            flex: 1;
-            min-width: 300px;
-            margin: 10px;
+        .col-left { flex: 2; min-width: 300px; }
+        .col-right { flex: 1; min-width: 300px; }
+
+        /* Requirement 2: Containers for Media */
+        .item-card {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* Requirement 2: Images and Videos in containers */
-        .media-box {
-            border: 2px solid #ddd;
+            border: 1px solid #ccc;
             margin-bottom: 20px;
-            padding: 10px;
-            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
+        img { width: 100%; border-radius: 5px; }
 
-        /* Requirement 3: Tables Full-length */
+        /* Requirement 3: Full-length Tables */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 30px;
             background: white;
+            margin: 20px 0;
         }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+        th, td { border: 1px solid #444; padding: 12px; text-align: left; }
+        th { background-color: #eee; }
 
         /* Requirement 11: Footer */
         footer {
-            background-color: #222;
+            background-color: #111;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 30px;
         }
+        section { padding: 40px 20px; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Collections</a>
-        <a href="#">Luxury Brands</a>
-        <a href="#">Care Guide</a>
-        <a href="#">Contact Us</a>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#videos">Showcase</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#materials">Materials</a>
     </nav>
 
-    <div class="hero-section">
+    <header id="home">
         <h1>Elite Designer Bags</h1>
-        <p>Your premier destination for luxury craftsmanship.</p>
-    </div>
+        <p>Experience the Pinnacle of Luxury and Style</p>
+    </header>
 
-    <div class="container">
+    <div class="main-content">
         
-        <div class="column">
-            <h2>The Gallery</h2>
+        <div class="col-left">
             
-            <p><strong>Exquisite Leather:</strong> Our collection features the finest Italian calfskin, known for its durability and soft texture.</p>
+            <section id="gallery">
+                <h2>Our Signature Collection</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div class="item-card"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400" alt="Bag 1"></div>
+                    <div class="item-card"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400" alt="Bag 2"></div>
+                    <div class="item-card"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=400" alt="Bag 3"></div>
+                    <div class="item-card"><img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400" alt="Bag 4"></div>
+                    <div class="item-card"><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=400" alt="Bag 5"></div>
+                </div>
+            </section>
 
-            <div class="media-box">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Luxury Handbag">
-                <p>Signature Tote</p>
-            </div>
-            <div class="media-box">
-                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Classic Purse">
-                <p>Evening Clutch</p>
-            </div>
-            <div class="media-box">
-                <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500" alt="Modern Backpack">
-                <p>Minimalist Backpack</p>
-            </div>
-            <div class="media-box">
-                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500" alt="Leather Satchel">
-                <p>Heritage Satchel</p>
-            </div>
-            <div class="media-box">
-                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500" alt="Shoulder Bag">
-                <p>Parisian Shoulder Bag</p>
-            </div>
+            <section id="catalog">
+                <h2>Inventory & Pricing</h2>
+                <table>
+                    <thead><tr><th>Series</th><th>Material</th><th>Price (USD)</th></tr></thead>
+                    <tbody>
+                        <tr><td>The Sovereign</td><td>Ostrich Leather</td><td>$4,200</td></tr>
+                        <tr><td>Nightfall Clutch</td><td>Calfskin</td><td>$1,550</td></tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead><tr><th>Region</th><th>Boutique</th><th>Availability</th></tr></thead>
+                    <tbody>
+                        <tr><td>New York</td><td>5th Avenue</td><td>In Stock</td></tr>
+                        <tr><td>Tokyo</td><td>Ginza District</td><td>Pre-order</td></tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
 
-        <div class="column">
-            <h2>Craftsmanship Videos</h2>
+        <div class="col-right" id="videos">
+            <h2>Luxury Highlights</h2>
             
-            <div class="media-box">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/V6XjG9G8v-8" frameborder="0" allowfullscreen></iframe>
+            <div class="item-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/V6XjG9G8v-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="media-box">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Ssh7V-09I_Y" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="media-box">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/O8Y7-5HnS_k" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="media-box">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/0Gbe65-e9pE" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="media-box">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Q4X-Zf6m_D4" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="media-box">
+            <div class="item-card">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/rVIsj-Y2Xj0" frameborder="0" allowfullscreen></iframe>
             </div>
+            <div class="item-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Ssh7V-09I_Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="item-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Q4X-Zf6m_D4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="item-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/0Gbe65-e9pE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="item-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/O8Y7-5HnS_k" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
-    <hr>
-
-    <div style="padding: 20px;">
-        <h2>Inventory Catalog</h2>
-        <table>
-            <tr>
-                <th>Brand</th>
-                <th>Model</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Luxe Aura</td>
-                <td>Marquis Gold</td>
-                <td>$2,500</td>
-            </tr>
-            <tr>
-                <td>Veloce</td>
-                <td>Carbonite 10</td>
-                <td>$1,800</td>
-            </tr>
-        </table>
-
-        <h2>Store Locations</h2>
-        <table>
-            <tr>
-                <th>City</th>
-                <th>Address</th>
-                <th>Contact</th>
-            </tr>
-            <tr>
-                <td>Paris</td>
-                <td>Avenue Montaigne</td>
-                <td>+33 1 00 00 00</td>
-            </tr>
-            <tr>
-                <td>Milan</td>
-                <td>Via Montenapoleone</td>
-                <td>+39 02 00 00 0</td>
-            </tr>
-        </table>
-
-        <h3>Materials Used</h3>
-        <ul>
-            <li>Natural Leathers
+    <section id="materials" style="background-color: white; margin: 20px; border-radius: 10px;">
+        <h3>Production Standard</h3>
+        <ul style="line-height: 1.8;">
+            <li>Ethical Sourcing
                 <ul>
-                    <li>Full-grain Cowhide</li>
-                    <li>Exotic Python</li>
-                    <li>Suede Finishes</li>
+                    <li>LWG Certified Tanneries</li>
+                    <li>Fair Trade Hardware</li>
+                    <li>Recycled Packaging</li>
                 </ul>
             </li>
-            <li>Hardware
-                <ul>
-                    <li>24k Gold Plated</li>
-                    <li>Brushed Nickel</li>
-                </ul>
-            </li>
+            <li>Hand-Stitched Details</li>
+            <li>Weather-proof Coating</li>
         </ul>
 
-        <p style="font-style: italic;"><strong>Limited Edition:</strong> Please note that our seasonal drops are produced in small batches to maintain exclusivity.</p>
-        <p style="text-decoration: underline;"><strong>Warranty:</strong> All bags come with a lifetime repair guarantee for stitching and hardware.</p>
-        <p style="color: navy;"><strong>Sustainability:</strong> We source 100% of our leather from tanneries certified by the Leather Working Group.</p>
-        <p><strong>Shipping:</strong> Worldwide express shipping is available for all elite members of our rewards program.</p>
-    </div>
+        <hr>
 
-    <div style="text-align: center; padding: 10px;">
-        <button onclick="alert('Item added to wishlist!')">Add to Wishlist</button>
-    </div>
+        <p><strong>Premium Quality:</strong> Every bag undergoes a 20-point inspection before it leaves our atelier.</p>
+        <p><i>Exclusive Membership:</i> Joining our elite club grants you early access to "Limited Drop" designs.</p>
+        <p style="text-decoration: underline;">Care Instructions: Avoid direct sunlight for extended periods to preserve leather oils.</p>
+        <p style="color: darkblue; font-weight: bold;">Global Delivery: We offer white-glove delivery services in over 40 countries.</p>
+        <p><small>Note: Natural leather variations are a hallmark of authenticity and not a defect.</small></p>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Elite Designer Bags. All rights reserved.</p>
+        <p>&copy; 2026 Elite Designer Bags | Designed for Daystar Project</p>
     </footer>
 
 </body>
