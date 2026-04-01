@@ -2,228 +2,231 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Designer Bags</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Designer Bags | Home</title>
     <style>
+        /* Requirement 4 & 10: Styling, Background (Teal), and Aesthetics */
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: peachpuff;
+            background-color: teal; /* Requirement: Background color Teal */
+            color: #333;
         }
 
+        /* Requirement 6: Menu Bar - At least 5 menus */
         nav {
-            background: #333;
-            padding: 15px;
+            background-color: #004d4d;
+            padding: 1rem;
             text-align: center;
-            position: sticky;
-            top: 0;
         }
-
         nav a {
             color: white;
-            margin: 15px;
             text-decoration: none;
+            padding: 0 15px;
             font-weight: bold;
         }
 
-        nav a:hover {
-            color: gold;
-        }
-
-        header {
-            background: #ffb6a3;
-            color: black;
-            text-align: center;
+        /* Requirement: Home Page Blue Styling */
+        .hero-section {
+            background-color: #0056b3; /* Home page blue */
+            color: white;
             padding: 40px;
+            text-align: center;
         }
 
-        section {
-            padding: 30px;
-        }
-
+        /* Requirement 1: At least 2 columns */
         .container {
             display: flex;
             flex-wrap: wrap;
-        }
-
-        .left, .right {
-            width: 50%;
+            justify-content: space-around;
             padding: 20px;
         }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
+        .column {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
+        /* Requirement 2: Images and Videos in containers */
+        .media-box {
+            border: 2px solid #ddd;
+            margin-bottom: 20px;
             padding: 10px;
             text-align: center;
         }
-
-        iframe {
-            width: 100%;
-            height: 250px;
-            margin-top: 15px;
-            border-radius: 10px;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
         }
 
+        /* Requirement 3: Tables Full-length */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: white;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Requirement 11: Footer */
         footer {
-            background: #333;
+            background-color: #222;
             color: white;
             text-align: center;
-            padding: 15px;
-        }
-
-        @media(max-width: 768px) {
-            .left, .right {
-                width: 100%;
-            }
+            padding: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
-
 <body>
 
-<!-- MENU -->
-<nav>
-    <a href="#home">Home</a>
-    <a href="#types">Types</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#prices">Prices</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Collections</a>
+        <a href="#">Luxury Brands</a>
+        <a href="#">Care Guide</a>
+        <a href="#">Contact Us</a>
+    </nav>
 
-<!-- HOME -->
-<header id="home">
-    <h1>Designer Bags</h1>
-    <p>Luxury | Style | Elegance</p>
-</header>
-
-<section>
-    <div class="container">
-        <div class="left">
-            <h2>About Designer Bags</h2>
-            <p>Designer bags are luxury accessories made from premium materials. Brands like Louis Vuitton, Gucci, Chanel, and Prada are known worldwide for quality and style.</p>
-
-            <h3>Popular Brands</h3>
-            <ul>
-                <li>Louis Vuitton</li>
-                <li>Gucci</li>
-                <li>Chanel</li>
-                <li>Prada</li>
-                <li>Hermes</li>
-            </ul>
-        </div>
-
-        <div class="right">
-            <h2>Advantages</h2>
-            <ol>
-                <li>High quality materials</li>
-                <li>Durable and long-lasting</li>
-                <li>Luxury fashion statement</li>
-            </ol>
-        </div>
+    <div class="hero-section">
+        <h1>Elite Designer Bags</h1>
+        <p>Your premier destination for luxury craftsmanship.</p>
     </div>
-</section>
-
-<!-- TYPES -->
-<section id="types">
-    <h2>Types of Designer Bags</h2>
-
-    <ul>
-        <li>Handbags
-            <ul>
-                <li>Classic</li>
-                <li>Modern</li>
-            </ul>
-        </li>
-        <li>Tote Bags</li>
-        <li>Clutches</li>
-        <li>Backpacks</li>
-    </ul>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-    <h2>Designer Bag Gallery</h2>
 
     <div class="container">
-        <img src="https://images.unsplash.com/photo-1585386959984-a4155223165b" alt="Luxury handbag">
-        <img src="https://images.unsplash.com/photo-1593032465171-8cda0c3c3a7d" alt="Designer leather bag">
-        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Fashion handbag">
-        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e" alt="Stylish purse">
-
-        <div class="left">
+        
+        <div class="column">
+            <h2>The Gallery</h2>
             
+            <p><strong>Exquisite Leather:</strong> Our collection features the finest Italian calfskin, known for its durability and soft texture.</p>
+
+            <div class="media-box">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Luxury Handbag">
+                <p>Signature Tote</p>
+            </div>
+            <div class="media-box">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Classic Purse">
+                <p>Evening Clutch</p>
+            </div>
+            <div class="media-box">
+                <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500" alt="Modern Backpack">
+                <p>Minimalist Backpack</p>
+            </div>
+            <div class="media-box">
+                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500" alt="Leather Satchel">
+                <p>Heritage Satchel</p>
+            </div>
+            <div class="media-box">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500" alt="Shoulder Bag">
+                <p>Parisian Shoulder Bag</p>
+            </div>
         </div>
 
-        <div class="right">
-            <img src="https://images.unsplash.com/photo-1600180758895-0b4c0d6d58a6" alt="Elegant designer bag">
-            <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03" alt="Luxury fashion bag">
-            <img src="https://images.unsplash.com/photo-1600180758895-0b4c0d6d58a6">
-           
-        </div>
-    </div>
-</section>
-
-<!-- PRICES -->
-<section id="prices">
-    <h2>Price Table</h2>
-
-    <table>
-        <tr>
-            <th>Brand</th>
-            <th>Price ($)</th>
-        </tr>
-        <tr>
-            <td>Louis Vuitton</td>
-            <td>1500</td>
-        </tr>
-        <tr>
-            <td>Gucci</td>
-            <td>1200</td>
-        </tr>
-        <tr>
-            <td>Chanel</td>
-            <td>3000</td>
-        </tr>
-    </table>
-</section>
-
-<!-- CONTACT + VIDEOS -->
-<section id="contact">
-    <h2>Contact & Videos</h2>
-
-    <div class="container">
-        <div class="left">
-            <p>Email: info@designerbags.com</p>
-            <p>Phone: +254 700 000000</p>
-        </div>
-
-        <div class="right">
-            <h3>Watch Designer Bag Videos</h3>
-
-            <iframe src="https://www.youtube.com/embed/6n4v4Hn9zQ0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/3y8Z5h7Zk3E" allowfullscreen></iframe>
+        <div class="column">
+            <h2>Craftsmanship Videos</h2>
+            
+            <div class="media-box">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/V6XjG9G8v-8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-box">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Ssh7V-09I_Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-box">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/O8Y7-5HnS_k" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-box">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/0Gbe65-e9pE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-box">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Q4X-Zf6m_D4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-box">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/rVIsj-Y2Xj0" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Designer Bags Website | All Rights Reserved</p>
-</footer>
+    <hr>
+
+    <div style="padding: 20px;">
+        <h2>Inventory Catalog</h2>
+        <table>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Luxe Aura</td>
+                <td>Marquis Gold</td>
+                <td>$2,500</td>
+            </tr>
+            <tr>
+                <td>Veloce</td>
+                <td>Carbonite 10</td>
+                <td>$1,800</td>
+            </tr>
+        </table>
+
+        <h2>Store Locations</h2>
+        <table>
+            <tr>
+                <th>City</th>
+                <th>Address</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td>Paris</td>
+                <td>Avenue Montaigne</td>
+                <td>+33 1 00 00 00</td>
+            </tr>
+            <tr>
+                <td>Milan</td>
+                <td>Via Montenapoleone</td>
+                <td>+39 02 00 00 0</td>
+            </tr>
+        </table>
+
+        <h3>Materials Used</h3>
+        <ul>
+            <li>Natural Leathers
+                <ul>
+                    <li>Full-grain Cowhide</li>
+                    <li>Exotic Python</li>
+                    <li>Suede Finishes</li>
+                </ul>
+            </li>
+            <li>Hardware
+                <ul>
+                    <li>24k Gold Plated</li>
+                    <li>Brushed Nickel</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p style="font-style: italic;"><strong>Limited Edition:</strong> Please note that our seasonal drops are produced in small batches to maintain exclusivity.</p>
+        <p style="text-decoration: underline;"><strong>Warranty:</strong> All bags come with a lifetime repair guarantee for stitching and hardware.</p>
+        <p style="color: navy;"><strong>Sustainability:</strong> We source 100% of our leather from tanneries certified by the Leather Working Group.</p>
+        <p><strong>Shipping:</strong> Worldwide express shipping is available for all elite members of our rewards program.</p>
+    </div>
+
+    <div style="text-align: center; padding: 10px;">
+        <button onclick="alert('Item added to wishlist!')">Add to Wishlist</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Elite Designer Bags. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
