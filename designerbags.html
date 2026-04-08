@@ -17,7 +17,7 @@
             color: #1e2a2e;
             scroll-behavior: smooth;
         }
-        /* Requirement 6: Menu Bar (5+ items) - expanded to 9 items for new pages */
+        /* Requirement 6: Menu Bar (5+ items) - expanded to 11 items for all pages */
         .menu-bar {
             background-color: #023535;
             padding: 1rem 2rem;
@@ -192,7 +192,7 @@
             margin-top: 1rem;
             text-align: center;
         }
-        /* NEW: Page section styling for added pages */
+        /* Page section styling */
         .new-page-section {
             background: #fffef7;
             max-width: 1400px;
@@ -241,7 +241,7 @@
             background: #e6b17e;
             color: white;
         }
-        .appointment-btn, .reserve-btn {
+        .appointment-btn, .reserve-btn, .contact-btn {
             background: #e6b17e;
             border: none;
             padding: 10px 20px;
@@ -251,7 +251,7 @@
             margin-top: 10px;
             transition: 0.2s;
         }
-        .appointment-btn:hover, .reserve-btn:hover {
+        .appointment-btn:hover, .reserve-btn:hover, .contact-btn:hover {
             background: #023535;
             color: #f7f3e0;
         }
@@ -262,11 +262,47 @@
             border-radius: 24px;
             font-size: 0.9rem;
         }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            padding: 0.8rem 1rem;
+            border-radius: 40px;
+            border: 1px solid #c9bc9b;
+            font-family: inherit;
+            background: #fffef7;
+        }
+        .contact-form textarea {
+            border-radius: 24px;
+            resize: vertical;
+        }
+        .about-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            text-align: center;
+            padding: 1.5rem;
+            background: #f0e5ce;
+            border-radius: 28px;
+            margin: 1.5rem 0;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
 
-<!-- Requirement 6: Menu Bars (expanded to 9 items for 5 original + 4 new pages) -->
+<!-- Requirement 6: Menu Bars (expanded to 11 items for all pages) -->
 <div class="menu-bar">
     <a href="#home">🏠 HOME</a>
     <a href="#gallery">👜 GALLERY</a>
@@ -277,9 +313,11 @@
     <a href="#sustainability">🌿 SUSTAINABILITY</a>
     <a href="#concierge">💎 CONCIERGE</a>
     <a href="#loyalty">👑 LOYALTY</a>
+    <a href="#about">📖 ABOUT</a>
+    <a href="#contact">📞 CONTACT</a>
 </div>
 
-<!-- HOME section (page 1 - unchanged) -->
+<!-- HOME section (page 1) -->
 <section id="home">
     <div class="hero">
         <h1>LUMIÈRE DESIGNER BAGS</h1>
@@ -368,7 +406,6 @@
                 <li>Microfiber lining with anti-humidity treatment</li>
                 <li>Limited edition serial number & authenticity card</li>
             </ul>
-            <p style="font-size:0.85rem; margin-top: 0.8rem;"></p>
         </div>
         
         <!-- Requirement 8: At least 5 formatted paragraphs - unchanged -->
@@ -437,7 +474,7 @@
     <p style="font-weight: bold;">🎁 Exclusive: Pre-order the new "Aurora Capsule" collection and receive a matching leather wallet.</p>
 </section>
 
-<!-- ========== NEW PAGE 2: ATELIER (Behind the Scenes) ========== -->
+<!-- PAGE 2: ATELIER -->
 <section id="atelier" class="new-page-section">
     <h2>🏭 ATELIER SECRETS · The Art of Creation</h2>
     <div class="feature-grid">
@@ -460,7 +497,7 @@
     </div>
 </section>
 
-<!-- ========== NEW PAGE 3: SUSTAINABILITY (Eco-Luxury) ========== -->
+<!-- PAGE 3: SUSTAINABILITY -->
 <section id="sustainability" class="new-page-section">
     <h2>🌿 SUSTAINABLE LUXURY · Our Promise to Tomorrow</h2>
     <div class="feature-grid">
@@ -477,7 +514,6 @@
             <p>Our tanneries use 80% recycled water and solar energy, reducing environmental impact by 65% vs industry average.</p>
         </div>
     </div>
-    <!-- ADDITIONAL FEATURE 1: Interactive Sustainability Quiz (4 marks - one of the added features) -->
     <div style="margin-top: 1.5rem; background: #e2cfaa; border-radius: 28px; padding: 1.2rem;">
         <h3>🌱 ECO-QUIZ: How sustainable is your bag collection?</h3>
         <div id="quizResult" class="result-area" style="margin-top: 0.5rem;">Take the quiz below 👇</div>
@@ -487,11 +523,10 @@
             <div class="quiz-option" onclick="submitQuiz('invest')">💎 I invest in timeless, high-quality pieces that last decades</div>
             <div class="quiz-option" onclick="submitQuiz('repair')">🔧 I repair and restore my bags instead of replacing</div>
         </div>
-        <p style="font-size: 0.75rem; margin-top: 0.5rem;"><em>✨ Added Feature: Interactive Eco-Score — get personalized sustainable luxury tips</em></p>
     </div>
 </section>
 
-<!-- ========== NEW PAGE 4: CONCIERGE (Personal Shopping) ========== -->
+<!-- PAGE 4: CONCIERGE -->
 <section id="concierge" class="new-page-section">
     <h2>💎 LUMIÈRE PRIVATE CONCIERGE</h2>
     <div class="feature-grid">
@@ -508,7 +543,6 @@
             <p>Concierge members get early access to limited drops and capsule collections before public release.</p>
         </div>
     </div>
-    <!-- ADDITIONAL FEATURE 2: Appointment booking simulator (4 marks) -->
     <div style="margin-top: 1.5rem; background: #fff0db; border-radius: 28px; padding: 1.2rem;">
         <h3>📅 Schedule a Private Consultation</h3>
         <p>Select preferred service:</p>
@@ -522,7 +556,7 @@
     </div>
 </section>
 
-<!-- ========== NEW PAGE 5: LOYALTY PROGRAM (Fourth new page) ========== -->
+<!-- PAGE 5: LOYALTY -->
 <section id="loyalty" class="new-page-section">
     <h2>👑 LA MAISON LUMIÈRE · Loyalty Circle</h2>
     <div class="feature-grid">
@@ -539,7 +573,6 @@
             <p>Shop new collections 48 hours before public launch. Priority restock notifications.</p>
         </div>
     </div>
-    <!-- ADDITIONAL FEATURE 3: Points Calculator / Interactive Poll (4 marks) -->
     <div style="margin-top: 1.5rem; background: #e2cfaa; border-radius: 28px; padding: 1.2rem;">
         <h3>💳 Points Calculator: How many points will you earn?</h3>
         <p>Enter your next purchase amount (KES):</p>
@@ -547,7 +580,6 @@
         <button class="appointment-btn" onclick="calculatePoints()">💎 Calculate Points</button>
         <div id="pointsResult" class="result-area" style="margin-top: 0.8rem;">👉 Enter amount to see points + reward tier</div>
     </div>
-    <!-- ADDITIONAL FEATURE 4: Referral System (4 marks) -->
     <div style="margin-top: 1rem; background: #f0e5ce; border-radius: 28px; padding: 1.2rem; text-align: center;">
         <h3>🤝 Refer a Friend, Earn Rewards</h3>
         <p>Share your unique referral code and earn 2,000 points when they make their first purchase.</p>
@@ -556,60 +588,58 @@
     </div>
 </section>
 
-<!-- Footer - unchanged -->
-<footer>
-    <p>© 2026 LUMIÈRE Designer Bags — Daystar University Final Project | All Artisan Rights Reserved</p>
-    <p>📍 Flagship: Milan | New York | Tokyo | Dubai  |  ✉️ concierge@lumierebags.com</p>
-    <p>🌟 9 Total Pages | 8+ Interactive Features | Complete Design Preservation</p>
-</footer>
+<!-- ========== NEW PAGE 6: ABOUT US ========== -->
+<section id="about" class="new-page-section">
+    <h2>📖 Our Story · LUMIÈRE Heritage</h2>
+    <div class="about-quote">
+        "Luxury is not about excess. It is about excellence — the quiet confidence of something made with intention."
+    </div>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h4>✨ Founded in 2012</h4>
+            <p>LUMIÈRE was born in a small Florentine workshop with a single mission: to revive forgotten artisanal techniques and create bags that transcend seasons.</p>
+        </div>
+        <div class="feature-card">
+            <h4>🇮🇹 Italian Heritage</h4>
+            <p>Every LUMIÈRE bag is still handcrafted in Italy, using leather from the most prestigious tanneries in Tuscany.</p>
+        </div>
+        <div class="feature-card">
+            <h4>🌍 Global Family</h4>
+            <p>Today, LUMIÈRE has boutiques in 12 countries and a dedicated community of collectors who value timeless design.</p>
+        </div>
+    </div>
+    <div style="margin-top: 1.5rem;">
+        <h3>👥 Meet the Artisans Behind the Magic</h3>
+        <div class="feature-grid">
+            <div class="team-member feature-card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Artisan Elena">
+                <h4>Elena Rossini</h4>
+                <p>Master Leather Cutter · 28 years of experience</p>
+            </div>
+            <div class="team-member feature-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Artisan Marco">
+                <h4>Marco Bellini</h4>
+                <p>Head Stitcher · Third-generation artisan</p>
+            </div>
+            <div class="team-member feature-card">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Design Director">
+                <h4>Sofia Conti</h4>
+                <p>Creative Director · Founder's daughter</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 1.5rem; background: #f0e5ce; border-radius: 28px; padding: 1.2rem; text-align: center;">
+        <p><strong>🏆 Awards & Recognition</strong> — Winner of "Best Italian Handbag Brand" 2023, 2024 · Vogue Sustainability Award Finalist</p>
+    </div>
+</section>
 
-<script>
-    // ADDITIONAL FEATURE 1: Sustainability Quiz
-    function submitQuiz(answer) {
-        let message = "";
-        if (answer === 'vegan') {
-            message = "🌱 You're a Conscious Cruelty-Free Shopper! Tip: Explore our cactus leather collection — 100% vegan and biodegradable.";
-        } else if (answer === 'vintage') {
-            message = "♻️ Vintage Lover! You're reducing fashion waste. LUMIÈRE offers a certified pre-loved program with full authenticity guarantee.";
-        } else if (answer === 'invest') {
-            message = "💎 Timeless Investor! Our heritage collection bags appreciate in value. You qualify for the Velvet loyalty tier instantly.";
-        } else if (answer === 'repair') {
-            message = "🔧 Repair Champion! We offer free repair estimates and lifetime care for all LUMIÈRE originals. Book a spa service today.";
-        }
-        document.getElementById('quizResult').innerHTML = `<strong>✨ Your Eco-Profile:</strong> ${message}`;
-    }
-    
-    // ADDITIONAL FEATURE 2: Appointment booking
-    function bookAppointment() {
-        const type = document.getElementById('appointmentType').value;
-        document.getElementById('appointmentResult').innerHTML = `✅ Request received! A LUMIÈRE concierge will contact you within 24 hours to confirm your ${type}. Thank you.`;
-    }
-    
-    // ADDITIONAL FEATURE 3: Points calculator
-    function calculatePoints() {
-        let amount = document.getElementById('purchaseAmount').value;
-        if (!amount || amount <= 0) {
-            document.getElementById('pointsResult').innerHTML = "⚠️ Please enter a valid purchase amount (KES).";
-            return;
-        }
-        let points = Math.floor(amount / 100) * 10; // 10 points per 100 KES
-        let tier = "";
-        if (points >= 5000) tier = "🏆 GOLD Tier — 15% back + VIP events";
-        else if (points >= 2000) tier = "✨ VELVET Tier — 10% back + birthday gift";
-        else tier = "🌸 SILK Tier — 5% back on all purchases";
-        document.getElementById('pointsResult').innerHTML = `💰 You will earn ${points} points! ${tier}`;
-    }
-    
-    // ADDITIONAL FEATURE 4: Referral code generator
-    function generateReferral() {
-        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789';
-        let code = 'LUMIERE-';
-        for (let i = 0; i < 6; i++) {
-            code += chars.charAt(Math.floor(Math.random() * chars.length));
-        }
-        document.getElementById('referralResult').innerHTML = `🔑 Your referral code: <strong>${code}</strong><br>Share this code with friends. You both get 2,000 points on their first purchase!`;
-    }
-</script>
-
-</body>
-</html>
+<!-- ========== NEW PAGE 7: CONTACT US ========== -->
+<section id="contact" class="new-page-section">
+    <h2>📞 Contact LUMIÈRE Concierge</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h4>📍 Flagship Boutiques</h4>
+            <p><strong>Paris:</strong> 24 Rue Saint-Honoré, 75001<br>+33 1 42 96 88 77</p>
+            <p><strong>Milan:</strong> Via Montenapoleone 12, 20121<br>+39 02 7600 1234</p>
+            <p><strong>Tokyo:</strong> 5-4-3 Ginza, Chuo City<br>+81 3 3567 8901</p>
+            <p><strong
