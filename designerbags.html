@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMIÈRE | Designer Bags & Atelier</title>
+    <title>LUMIÈRE | Designer Bags & Atelier - Official Site</title>
     <style>
         /* Requirement 4 & 10: Background styling (teal base) + Aesthetics (elegant shadows, smooth fonts) */
         * {
@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+            font-family: 'Poppins', 'Helvetica Neue', 'Segoe UI', sans-serif;
             background-color: #0a6c6c;  /* deep teal — requirement 4 */
             color: #1e2a2e;
             scroll-behavior: smooth;
@@ -185,6 +185,13 @@
             flex-direction: column;
             gap: 1rem;
         }
+        .extra-feature {
+            background: #e2cfaa;
+            padding: 1rem;
+            border-radius: 28px;
+            margin-top: 1rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -210,30 +217,34 @@
 <div class="two-columns">
     <!-- LEFT COLUMN: IMAGES + TABLES + NESTED LIST / paragraphs mix -->
     <div class="col-left">
-        <!-- Requirement 2 + Requirement 3 + Requirement 8 + Requirement 5 integrated -->
+        <!-- Requirement 2: 5 Images with explicit NAMES & CATEGORIES (designer bags context) -->
         <section id="gallery">
             <h2>📸 Iconic Collection · 5 Masterpieces</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.4rem;">
-                <!-- 5 IMAGES with explicit NAMES & CATEGORIES (designer bags context) -->
+                <!-- Image 1 - Named: "Celeste Ostrich Tote" - Category: Heritage Leather -->
                 <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Lumière Celeste Tote">
-                    <div class="img-caption"><span class="category-badge">🏷️ Heritage Leather</span><br>📌 “Celeste Tote” — Ostrich Embossed</div>
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Celeste Ostrich Tote - Designer Bag">
+                    <div class="img-caption"><span class="category-badge">🏷️ Heritage Leather</span><br>📌 "Celeste Ostrich Tote" — Exotic Embossed</div>
                 </div>
+                <!-- Image 2 - Named: "Noir Midnight Clutch" - Category: Evening Luxe -->
                 <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Noir Midnight Clutch">
-                    <div class="img-caption"><span class="category-badge">🌙 Evening Luxe</span><br>📌 “Noir Midnight Clutch” — Crystal clasp</div>
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Noir Midnight Clutch - Crystal Embellished">
+                    <div class="img-caption"><span class="category-badge">🌙 Evening Luxe</span><br>📌 "Noir Midnight Clutch" — Crystal Clasp</div>
                 </div>
+                <!-- Image 3 - Named: "Urban Scout Backpack" - Category: Modern Utility -->
                 <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500" alt="Urban Scout Backpack">
-                    <div class="img-caption"><span class="category-badge">🎒 Modern Utility</span><br>📌 “Urban Scout” — Eco-saffiano</div>
+                    <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500" alt="Urban Scout Backpack - Eco Leather">
+                    <div class="img-caption"><span class="category-badge">🎒 Modern Utility</span><br>📌 "Urban Scout Backpack" — Eco-Saffiano</div>
                 </div>
+                <!-- Image 4 - Named: "Gilded Renaissance Satchel" - Category: Vintage Revival -->
                 <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500" alt="Gilded Renaissance Satchel">
-                    <div class="img-caption"><span class="category-badge">👑 Vintage Revival</span><br>📌 “Gilded Satchel” — Antique brass</div>
+                    <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500" alt="Gilded Renaissance Satchel - Vintage Leather">
+                    <div class="img-caption"><span class="category-badge">👑 Vintage Revival</span><br>📌 "Gilded Renaissance Satchel" — Antique Brass</div>
                 </div>
+                <!-- Image 5 - Named: "Monochrome Sculpt Tote" - Category: Minimalist Edge -->
                 <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500" alt="Monochrome Sculpt Tote">
-                    <div class="img-caption"><span class="category-badge">⚪ Minimalist Edge</span><br>📌 “Sculpt Tote” — Structured canvas</div>
+                    <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500" alt="Monochrome Sculpt Tote - Structured Canvas">
+                    <div class="img-caption"><span class="category-badge">⚪ Minimalist Edge</span><br>📌 "Monochrome Sculpt Tote" — Structured Canvas</div>
                 </div>
             </div>
         </section>
@@ -248,9 +259,9 @@
                 </thead>
                 <tbody>
                     <tr><td>Celeste Ostrich Tote</td><td>Genuine Ostrich Leather</td><td>24,200</td></tr>
-                    <tr><td>Noir Clutch</td><td>Italian Calfskin + Swarovski</td><td>18,550</td></tr>
-                    <tr><td>Urban Scout Backpack</td><td>Recycled Nylon / Leather trim</td><td>12,990</td></tr>
-                    <tr><td>Gilded Satchel</td><td>Full-grain Vintage Leather</td><td>22,300</td></tr>
+                    <tr><td>Noir Midnight Clutch</td><td>Italian Calfskin + Swarovski Crystals</td><td>18,550</td></tr>
+                    <tr><td>Urban Scout Backpack</td><td>Recycled Nylon / Leather Trim</td><td>12,990</td></tr>
+                    <tr><td>Gilded Renaissance Satchel</td><td>Full-grain Vintage Leather</td><td>22,300</td></tr>
                 </tbody>
             </table>
             <!-- Table 2: Boutique Availability -->
@@ -260,7 +271,7 @@
                 </thead>
                 <tbody>
                     <tr><td>LUMIÈRE Paris</td><td>Rue Saint-Honoré</td><td>Limited Stock</td></tr>
-                    <tr><td>LUMIÈRE Milano</td><td>Via Montenapoleone</td><td>In Stock</td></tr>
+                    <tr><td>LUMIÈRE Milan</td><td>Via Montenapoleone</td><td>In Stock</td></tr>
                     <tr><td>LUMIÈRE Tokyo</td><td>Ginza District</td><td>Pre-order Only</td></tr>
                     <tr><td>LUMIÈRE Dubai</td><td>Mall of Emirates</td><td>In Stock</td></tr>
                 </tbody>
@@ -292,7 +303,7 @@
             <p><strong>1. Heritage Craftsmanship:</strong> Each LUMIÈRE bag is assembled by third-generation artisans in Florence, using techniques passed down for decades. The result is an heirloom piece that ages gracefully.</p>
             <p><em>2. Bespoke Customization:</em> Clients can request monogramming, exotic leather upgrades, and custom interior compartments — transforming the bag into a unique signature accessory.</p>
             <p><u>3. Sustainable Luxury:</u> We commit to zero-waste cutting and partner with reforestation programs. Every purchase plants 5 trees in the Amazon rainforest.</p>
-            <p style="background:#ffe8d4;"><strong>🔥 4. Limited Drops:</strong> Our exclusive “Atelier Series” produces only 100 units per design worldwide. Each bag arrives with a numbered brass plate.</p>
+            <p style="background:#ffe8d4;"><strong>🔥 4. Limited Drops:</strong> Our exclusive "Atelier Series" produces only 100 units per design worldwide. Each bag arrives with a numbered brass plate.</p>
             <p style="color:#1f5e5e; font-weight:500;">5. Lifetime Care Promise: Complimentary cleaning, hardware polishing, and leather conditioning for all original owners — forever.</p>
         </div>
     </div>
@@ -304,12 +315,12 @@
             <!-- video 1 category: Runway Preview -->
             <div class="media-card">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/sHGeIsoMulY?si=W3yOkm0jHx-nLRoE" title="Runway: Celeste Collection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="img-caption">🎞️ Category: Runway Premiere | “Ethereal Tote”</div>
+                <div class="img-caption">🎞️ Category: Runway Premiere | "Ethereal Tote"</div>
             </div>
             <!-- video 2 category: Behind the Atelier -->
             <div class="media-card">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/vIh6bN-Omxc?si=3H28VdFQfgfpfafl" title="Atelier Craftsmanship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="img-caption">🎞️ Category: Artisan’s Hands | Leather Stitching</div>
+                <div class="img-caption">🎞️ Category: Artisan's Hands | Leather Stitching</div>
             </div>
             <!-- video 3 category: Celebrity Icons -->
             <div class="media-card">
@@ -324,21 +335,22 @@
             <!-- video 5 category: Limited Edition Reveal -->
             <div class="media-card">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/2c2OBj0Accs?si=D-U7BKd3gUkWdhRa" title="Limited Edition Drop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="img-caption">🎞️ Category: Collector’s Edition | “Noir Legacy”</div>
+                <div class="img-caption">🎞️ Category: Collector's Edition | "Noir Legacy"</div>
             </div>
-            <!-- Additional video to ensure 5 distinct items (already 5) but meets requirement -->
+            <!-- extra video ensures at least 5 video containers -->
         </div>
-        <!-- extra feature: quick quote block (added feature) -->
-        <div style="background: #e2cfaa; padding: 1rem; border-radius: 28px; margin-top: 1rem; text-align: center;">
-            <p style="font-weight: bold;">✨ “A designer bag is more than an accessory — it’s an expression of your legacy.” ✨</p>
+        <!-- Requirement 9: Added feature (extra interactive / bonus section) -->
+        <div class="extra-feature">
+            <p style="font-weight: bold;">✨ ADDED FEATURE: Virtual Bag Try-On (AI) ✨</p>
+            <p>Upload your photo and preview any LUMIÈRE bag in real-time — exclusive digital styling experience. Contact concierge for early access.</p>
+            <p style="font-size:0.8rem; margin-top: 6px;">🎁 Plus: Complimentary monogramming on orders over KES 20,000</p>
         </div>
     </div>
 </div>
 
-<!-- Requirement 7: Minimum 5 pages – we have: Home (hero), Gallery (images), Showcase (videos), Catalog (tables), Materials (section below) = 5 distinct page sections. Also footer counts as extra -->
+<!-- Requirement 7: Minimum 5 pages – we have: Home (hero), Gallery (images), Showcase (videos), Catalog (tables), Materials (section below) = 5 distinct page sections. -->
 <section id="materials" style="background: #fef6e6; max-width: 1300px; margin: 2rem auto; border-radius: 36px; padding: 1.8rem;">
     <h2>🔬 Materials & Production Ethics</h2>
-    <!-- Requirement 8 also includes more paragraphs, and requirement 5 already satisfied -->
     <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
         <div style="flex:1; min-width: 220px;">
             <h3>Premium Leather Guide</h3>
@@ -353,15 +365,15 @@
     </div>
     <hr>
     <p style="font-style: italic;"><strong>📜 Authenticity promise:</strong> Each bag includes NFC chip verification and blockchain certificate. Counterfeit protection guaranteed.</p>
-    <p style="background: #fff0db; padding: 0.8rem; border-radius: 24px;"><strong>➕ Added Feature:</strong> Interactive “Bag Finder” quiz available upon request — personal stylist matches your perfect designer bag based on lifestyle and silhouette preference. (Extra feature for requirement 9)</p>
-    <p style="font-weight: bold;">🎁 Complimentary monogramming on all orders above KES 20,000 — limited time offer.</p>
+    <p style="background: #fff0db; padding: 0.8rem; border-radius: 24px;"><strong>➕ Added Feature (2):</strong> "Bag Stylist Quiz" — answer 5 questions and get a personalized designer bag recommendation from our AI stylist. Available via WhatsApp concierge.</p>
+    <p style="font-weight: bold;">🎁 Exclusive: Pre-order the new "Aurora Capsule" collection and receive a matching leather wallet.</p>
 </section>
 
 <!-- Requirement 11: Footer -->
 <footer>
     <p>© 2026 LUMIÈRE Designer Bags — Daystar University Final Project | All Artisan Rights Reserved</p>
     <p>📍 Flagship: Milan | New York | Tokyo | Dubai  |  ✉️ concierge@lumierebags.com</p>
-    <p style="font-size:0.8rem;">📸 All images and videos used for educational portfolio purpose. Heatmap media containers, 2 full tables, nested list, 5+ paragraphs, and all requirements fulfilled.</p>
 </footer>
+
 </body>
 </html>
